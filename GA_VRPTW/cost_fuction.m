@@ -15,5 +15,5 @@ function cost=cost_fuction(VC,a,b,s,L,dist,demands,cap,alpha,belta,v)
 TD=travel_distance(VC,dist);        %计算当前配送方案总行驶距离
 q=violate_load(VC,demands,cap);     %计算当前配送方案中各条路径违反的装载量约束之和
 w=violateTW(VC,a,b,s,L,dist,v);     %计算当前配送方案中所有顾客违反的时间窗约束之和
-cost=TD+alpha*q+belta*w;            %计算当前配送方案总成本
+cost=TD+alpha*q+belta*2^w;            %计算当前配送方案总成本
 end
